@@ -101,12 +101,12 @@ window.ALIVE_BOOKLET = {
   workshops: [
     {
       title: "Start Here: How to Share the Gospel",
-      name: "Scotty Jones",
-      role: "Youth Alive Missionary",
+      name: "Arin Nicholson",
+      role: "Speaker",
       track: "Morning Breakout",
       location: "Main Auditorium",
       description:
-        "Do you ever feel the desire to share your faith but aren't sure how to start? This breakout will equip you to share the gospel with others using the Alive in Five icons. By attending this breakout session, you qualify to receive the Youth Alive Fire Bible.",
+        "Do you ever feel the desire to share your faith but aren't sure how to start? This breakout will equip you to  share the gospel with others using the Alive in Five icons.   If we understand what the gospel is and have a few key skills to give us confidence, it is life-changing and allows us to share our faith with confidence. By attending this breakout session, you qualify to receive the Youth Alive Fire Bible.",
     },
     {
       title: "How to Really Read the Bible",
@@ -218,12 +218,12 @@ window.ALIVE_BOOKLET = {
     },
     {
       title: "Leaders & Adults Session",
-      name: "Chris Stanley & Arin Nicholson",
-      role: "Speakers",
+      name: "Chris Stanley",
+      role: "Speaker",
       track: "Leaders & Adults | Afternoon",
       location: "Gym",
       description:
-        "Meet District Youth Director Chris Stanley and hear his heart and vision for the students of Illinois. Chris will share updates on upcoming events and ways to get better connected with Illinois Student Ministries. Arin Nicholson will join him with practical and encouraging tips to help you lead your youth ministry more effectively.",
+        "Meet District Youth Director Chris Stanley and hear his heart and vision for the students of Illinois. Chris will share updates on upcoming events and ways to get better connected with Illinois Student Ministries. ",
     },
   ],
   info: [
