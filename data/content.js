@@ -1,5 +1,5 @@
 window.ALIVE_BOOKLET = {
-  showSponsors: false,
+  showExhibitors: true,
   event: {
     name: "Alive Conference 2026",
     theme: "Everyone",
@@ -243,11 +243,20 @@ window.ALIVE_BOOKLET = {
         "Billy & Katy Willis welcome you to Alive Conference and are praying that God empowers you to shine brightly and speak boldly to everyone you know.",
     },
   ],
-  sponsors: [
+  exhibitors: [
     {
-      name: "Sponsor Name",
-      logo: "",
-      description: "Sponsor description or advertisement note goes here.",
+      name: "Gospel Encounter",
+      logo: "assets/exhibitors/logos/IMG_4684.png",
+      ad: "assets/exhibitors/ads/and Retro! - 2.png",
+      link: "https://www.gospelencounter.com/youth-impact",
+      description: "",
+    },
+    {
+      name: "Called College",
+      logo: "assets/exhibitors/logos/CalledCollege_Logo_Full_Color-black-text.png",
+      ad: "assets/exhibitors/ads/CC_Digital_Booklet_Ad_FineArts26.png",
+      link: "https://calledcollege.org/programs/",
+      description: "",
     },
   ],
 };

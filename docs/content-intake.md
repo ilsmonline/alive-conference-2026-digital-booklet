@@ -47,10 +47,12 @@ Fill this in as information becomes available. Codex can use this document to up
 | Merch |  |
 | Need Help? |  |
 
-## Sponsors
+## Exhibitors
 
-Set `showSponsors` to `true` in `data/content.js` when this section is ready.
+Put logo files in `assets/exhibitors/logos/`.
+Put phone-screen ad files in `assets/exhibitors/ads/`.
 
-| Sponsor Name | Logo / Ad filename | Description |
-| --- | --- | --- |
-|  |  |  |
+| Exhibitor Name | Logo Filename | Ad Filename | Website / Link | Short Description |
+| --- | --- | --- | --- | --- |
+| Gospel Encounter | IMG_4684.png | and Retro! - 2.png | https://www.gospelencounter.com/youth-impact |  |
+| Called College | CalledCollege_Logo_Full_Color-black-text.png | CC_Digital_Booklet_Ad_FineArts26.png | https://calledcollege.org/programs/ |  |

@@ -99,21 +99,29 @@ function renderInfo() {
   `).join("");
 }
 
-function renderSponsors() {
-  const section = document.getElementById("sponsors");
-  const link = document.querySelector(".sponsor-link");
-  if (!data.showSponsors) {
+function renderExhibitors() {
+  const section = document.getElementById("exhibitors");
+  const link = document.querySelector(".exhibitor-link");
+  if (!data.showExhibitors) {
     section.classList.add("is-hidden");
     link.classList.add("is-hidden");
     return;
   }
 
-  const list = document.getElementById("sponsorList");
-  list.innerHTML = data.sponsors.map((sponsor) => `
-    <article class="sponsor-card">
-      ${sponsor.logo ? `<img src="${sponsor.logo}" alt="${sponsor.name} logo">` : ""}
-      <h3>${sponsor.name}</h3>
-      <p>${sponsor.description}</p>
+  const list = document.getElementById("exhibitorList");
+  list.innerHTML = data.exhibitors.map((exhibitor) => `
+    <article class="exhibitor-card">
+      <div class="exhibitor-logo-wrap">
+        ${exhibitor.logo ? `<img class="exhibitor-logo" src="${exhibitor.logo}" alt="${exhibitor.name} logo">` : ""}
+      </div>
+      <a class="phone-ad" href="${exhibitor.link || exhibitor.ad}" target="_blank" rel="noopener">
+        <img src="${exhibitor.ad}" alt="${exhibitor.name} advertisement">
+      </a>
+      <div class="exhibitor-body">
+        <h3>${exhibitor.name}</h3>
+        ${exhibitor.description ? `<p>${exhibitor.description}</p>` : ""}
+        ${exhibitor.link ? `<a class="text-link" href="${exhibitor.link}" target="_blank" rel="noopener">Visit Website</a>` : ""}
+      </div>
     </article>
   `).join("");
 }
@@ -162,5 +170,5 @@ renderSchedule();
 renderSpeakers();
 renderWorkshops();
 renderInfo();
-renderSponsors();
+renderExhibitors();
 wireInteractions();

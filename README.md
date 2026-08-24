@@ -12,14 +12,15 @@ Most booklet content lives in `data/content.js`.
 - `speakers`: speaker names, roles, photos, and bios.
 - `workshops`: breakout leader name, role, workshop title, room, track, and description.
 - `info`: practical details like lunch, check-in, offering, help desk, or merch.
-- `showSponsors`: change this to `true` when you want the sponsor section/button to appear.
-- `sponsors`: sponsor names, logos, and ad blurbs.
+- `showExhibitors`: change this to `true` when you want the exhibitor section/button to appear.
+- `exhibitors`: exhibitor names, logos, phone-screen ads, and links.
 
 ## Where To Put Assets
 
 - Theme graphics: `assets/theme/`
 - Speaker photos: `assets/speakers/`
-- Sponsor logos or ads: `assets/sponsors/`
+- Exhibitor logos: `assets/exhibitors/logos/`
+- Exhibitor phone-screen ads: `assets/exhibitors/ads/`
 - General conference photos: `assets/photos/`
 
 After adding an image, reference it in `data/content.js` like this:

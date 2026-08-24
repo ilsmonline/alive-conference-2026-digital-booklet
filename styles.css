@@ -287,7 +287,7 @@ h3 {
 .speaker-grid,
 .workshop-grid,
 .info-grid,
-.sponsor-grid {
+.exhibitor-grid {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -300,7 +300,7 @@ h3 {
 .timeline-item,
 .workshop-card,
 .info-card,
-.sponsor-card {
+.exhibitor-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
@@ -384,15 +384,15 @@ h3 {
 
 .workshop-grid,
 .info-grid,
-.sponsor-grid {
+.exhibitor-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
 }
 
 .workshop-card,
 .info-card,
-.sponsor-card {
+.exhibitor-card {
   padding: 18px;
 }
 
@@ -423,11 +423,52 @@ h3 {
   color: var(--accent-dark);
 }
 
-.sponsor-card img {
-  width: 100%;
-  max-height: 140px;
+.exhibitor-card {
+  display: grid;
+  gap: 14px;
+}
+
+.exhibitor-logo-wrap {
+  display: grid;
+  min-height: 72px;
+  place-items: center;
+}
+
+.exhibitor-logo {
+  width: min(210px, 100%);
+  max-height: 72px;
   object-fit: contain;
-  margin-bottom: 12px;
+}
+
+.phone-ad {
+  display: block;
+  overflow: hidden;
+  width: min(100%, 280px);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  border: 10px solid var(--ink);
+  border-radius: 28px;
+  background: #1f1300;
+  box-shadow: 8px 8px 0 rgba(199, 148, 36, 0.38);
+}
+
+.phone-ad img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exhibitor-body {
+  display: grid;
+  gap: 8px;
+}
+
+.text-link {
+  color: var(--accent-dark);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 900;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .speaker-dialog {
