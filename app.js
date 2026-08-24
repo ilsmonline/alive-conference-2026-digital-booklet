@@ -70,15 +70,29 @@ function renderWorkshops(filter = "") {
     return haystack.includes(normalized);
   });
 
-  list.innerHTML = workshops.map((workshop) => `
+  list.innerHTML = workshops.map((workshop, index) => {
+    const detailsId = `workshop-details-${index}`;
+    return `
     <article class="workshop-card">
-      <span class="tag ${tagClass(workshop.track)}">${workshop.track || "Workshop"}</span>
-      <h3>${workshop.title}</h3>
-      <p class="workshop-meta">${workshop.name} | ${workshop.role}</p>
-      <p class="location">${workshop.location || ""}</p>
-      <p>${workshop.description}</p>
+      <button
+        class="workshop-summary"
+        type="button"
+        aria-expanded="false"
+        aria-controls="${detailsId}"
+      >
+        <span class="tag ${tagClass(workshop.track)}">${workshop.track || "Workshop"}</span>
+        <span class="workshop-title">${workshop.title}</span>
+        <span class="workshop-meta">${workshop.name} | ${workshop.role}</span>
+        <span class="location">${workshop.location || ""}</span>
+        <span class="expand-label" aria-hidden="true">Show Details</span>
+      </button>
+      <div class="workshop-details" id="${detailsId}" hidden>
+        <p>${workshop.description}</p>
+        ${workshop.bio ? `<button class="button primary workshop-bio-button" type="button" data-workshop-bio="${index}">Read Bio</button>` : ""}
+      </div>
     </article>
-  `).join("") || `<p>No workshops match that search.</p>`;
+  `;
+  }).join("") || `<p>No workshops match that search.</p>`;
 }
 
 function tagClass(track = "") {
@@ -143,26 +157,49 @@ function wireInteractions() {
     renderWorkshops(event.target.value);
   });
 
+  document.getElementById("workshopList").addEventListener("click", (event) => {
+    const bioButton = event.target.closest("[data-workshop-bio]");
+    if (bioButton) {
+      const workshop = data.workshops[Number(bioButton.dataset.workshopBio)];
+      openBioDialog(workshop);
+      return;
+    }
+
+    const button = event.target.closest(".workshop-summary");
+    if (!button) return;
+    const card = button.closest(".workshop-card");
+    const details = card.querySelector(".workshop-details");
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isOpen));
+    details.hidden = isOpen;
+    card.classList.toggle("is-expanded", !isOpen);
+  });
+
   const dialog = document.getElementById("speakerDialog");
-  const dialogContent = document.getElementById("speakerDialogContent");
   document.getElementById("speakerList").addEventListener("click", (event) => {
     const button = event.target.closest("[data-speaker]");
     if (!button) return;
     const speaker = data.speakers[Number(button.dataset.speaker)];
-    dialogContent.innerHTML = `
-      <div class="dialog-inner">
-        <img src="${imageOrFallback(speaker.photo)}" alt="${speaker.name}">
-        <div class="dialog-copy">
-          <h2>${speaker.name}</h2>
-          <p class="speaker-role">${speaker.role}</p>
-          <p>${speaker.bio}</p>
-        </div>
-      </div>
-    `;
-    dialog.showModal();
+    openBioDialog(speaker);
   });
 
   document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
+}
+
+function openBioDialog(person) {
+  const dialog = document.getElementById("speakerDialog");
+  const dialogContent = document.getElementById("speakerDialogContent");
+  dialogContent.innerHTML = `
+    <div class="dialog-inner">
+      <img src="${imageOrFallback(person.photo)}" alt="${person.name}">
+      <div class="dialog-copy">
+        <h2>${person.name}</h2>
+        <p class="speaker-role">${person.role}</p>
+        <p>${person.bio}</p>
+      </div>
+    </div>
+  `;
+  dialog.showModal();
 }
 
 renderHeader();

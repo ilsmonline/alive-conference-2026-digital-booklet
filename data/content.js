@@ -159,6 +159,9 @@ window.ALIVE_BOOKLET = {
       role: "Speaker",
       track: "Leaders & Adults | Morning",
       location: "Gym",
+      photo: "assets/speakers/Christy Hild.jpg",
+      bio:
+        "Dr. Christy Hild is an education leader, executive coach, and researcher whose work focuses on leadership, organizational improvement, trust, character development, and human potential. Her commitment to strong school-community partnerships was deeply shaped by experiencing a school violence event while serving as a principal, which reinforced her belief in the power of trusted relationships and collaborative stakeholder leadership; that work went on to inform improvement efforts across a range of initiatives as an Assistant Superintendent, including the collaborative creation of an innovative, strengths-based high school. She holds an Ed.D. in Educational Leadership, with doctoral research centered on growth mindset school communities, and is currently completing advanced study in character education through the University of Birmingham. In her work with FranklinCovey Education, Christy partners with leaders and school systems across the country to strengthen leadership, culture, and the conditions that help both people and organizations flourish.",
       description:
         "Your local school is one of the greatest mission fields in your community. Learn practical ways to build trust, develop relationships, and create meaningful partnerships with school leaders so your church can become a trusted friend and resource to the school down the road.",
     },
