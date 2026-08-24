@@ -155,7 +155,7 @@ window.ALIVE_BOOKLET = {
     },
     {
       title: "How to Build a Bridge with the School Down the Road",
-      name: "Christy Hild",
+      name: "Dr. Christy Hild",
       role: "Speaker",
       track: "Leaders & Adults | Morning",
       location: "Gym",
@@ -163,7 +163,7 @@ window.ALIVE_BOOKLET = {
       bio:
         "Dr. Christy Hild is an education leader, executive coach, and researcher whose work focuses on leadership, organizational improvement, trust, character development, and human potential. Her commitment to strong school-community partnerships was deeply shaped by experiencing a school violence event while serving as a principal, which reinforced her belief in the power of trusted relationships and collaborative stakeholder leadership; that work went on to inform improvement efforts across a range of initiatives as an Assistant Superintendent, including the collaborative creation of an innovative, strengths-based high school. She holds an Ed.D. in Educational Leadership, with doctoral research centered on growth mindset school communities, and is currently completing advanced study in character education through the University of Birmingham. In her work with FranklinCovey Education, Christy partners with leaders and school systems across the country to strengthen leadership, culture, and the conditions that help both people and organizations flourish.",
       description:
-        "Your local school is one of the greatest mission fields in your community. Learn practical ways to build trust, develop relationships, and create meaningful partnerships with school leaders so your church can become a trusted friend and resource to the school down the road.",
+        "Strong school-community partnerships begin with relationships grounded in service, understanding, shared purpose, and trust. In this session, youth pastors will explore six practices that help them build authentic relationships with school administrators and become valued partners in supporting students, families, and communities. Attendees will leave with practical language, examples, and next steps for creating partnerships where schools and community organizations work together to help young people flourish.",
     },
     {
       title: "How to Overcome Fear",
