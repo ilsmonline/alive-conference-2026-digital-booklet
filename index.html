@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alive Conference Digital Booklet</title>
+    <meta
+      name="description"
+      content="Interactive digital booklet for Alive Conference."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#welcome" aria-label="Alive Conference home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>
+          <strong id="eventName">Alive Conference</strong>
+          <small id="eventMeta">One day conference</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav">
+        Menu
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Booklet sections">
+        <a href="#welcome">Welcome</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#workshops">Workshops</a>
+        <a href="#info">Info</a>
+        <a class="sponsor-link" href="#sponsors">Sponsors</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="welcome">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow" id="themeLine">2026 Theme</p>
+          <h1 id="heroTitle">Alive Conference</h1>
+          <p class="hero-meta">August 29 <span aria-hidden="true">✦</span> Normal First Assembly</p>
+          <p class="hero-copy" id="welcomeCopy">
+            A focused one-day gathering for students and leaders.
+          </p>
+          <p class="welcome-signature" id="welcomeSignature"></p>
+          <div class="hero-actions">
+            <a class="button primary" href="#schedule">View Schedule</a>
+            <a class="button secondary" href="#workshops">Find Workshops</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="schedule">
+        <div class="section-heading">
+          <p class="eyebrow">Day Flow</p>
+          <h2>Schedule</h2>
+        </div>
+        <div class="timeline" id="scheduleList"></div>
+      </section>
+
+      <section class="section" id="speakers">
+        <div class="section-heading">
+          <p class="eyebrow">Main Sessions</p>
+          <h2>Speakers</h2>
+        </div>
+        <div class="speaker-grid" id="speakerList"></div>
+      </section>
+
+      <section class="section band" id="workshops">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Breakouts</p>
+            <h2>Workshops</h2>
+          </div>
+          <label class="search-box">
+            <span>Search</span>
+            <input id="workshopSearch" type="search" placeholder="Title, leader, role">
+          </label>
+        </div>
+        <div class="workshop-grid" id="workshopList"></div>
+      </section>
+
+      <section class="section info-section" id="info">
+        <div class="section-heading">
+          <p class="eyebrow">Helpful Details</p>
+          <h2>Conference Info</h2>
+        </div>
+        <div class="info-grid" id="infoList"></div>
+      </section>
+
+      <section class="section band sponsor-section" id="sponsors">
+        <div class="section-heading">
+          <p class="eyebrow">Partners</p>
+          <h2>Sponsors</h2>
+        </div>
+        <div class="sponsor-grid" id="sponsorList"></div>
+      </section>
+    </main>
+
+    <dialog class="speaker-dialog" id="speakerDialog">
+      <button class="dialog-close" type="button" aria-label="Close speaker bio">Close</button>
+      <div id="speakerDialogContent"></div>
+    </dialog>
+
+    <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+
+    <script src="data/content.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
